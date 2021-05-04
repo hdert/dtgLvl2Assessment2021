@@ -1,0 +1,45 @@
+{
+  "name": "dtglvl2assessment2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run css-lint && npm run css",
+    "build": "npm-run-all css html js",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css src/scss/styles.scss:css/styles.css",
+    "css-lint": "stylelint src/scss/",
+    "css-prefix": "postcss --replace css/styles.css --use autoprefixer --map",
+    "css-purge": "purgecss --keyframes --css css/styles.css --content index.html \"node_modules/bootstrap/js/dist/{util,modal}.js\" --output css/",
+    "css": "npm-run-all css-compile css-prefix",
+    "html": "pug src/pug/ --out ./",
+    "js": "tsc --outDir js/ src/ts/*",
+    "start": "npm-run --parallel watch",
+    "watch": "nodemon -e pug,scss,ts -x \"npm run build\""
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta3",
+    "bootstrap-icons": "^1.4.1",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "purgecss": "^4.0.2",
+    "stylelint": "^13.12.0",
+    "stylelint-config-twbs-bootstrap": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdert/dtgLvl2Assessment2021.git"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/hdert/dtgLvl2Assessment2021/issues"
+  },
+  "homepage": "https://github.com/hdert/dtgLvl2Assessment2021#readme"
+}
