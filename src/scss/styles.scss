@@ -1,3 +1,36 @@
+@use '_modules/variables' as *;
 html {
-  color: white;
+  // background-color: $highlight_one;
+  transition: 5s;
+  transform: rotate(180);
+  box-sizing: border-box;
+}
+
+#center {
+  // width: calc(100% / 12 * 6);
+}
+#buffer {
+  width: calc(100% / 12 * 3);
+}
+#ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+#open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+#source-sans-pro {
+  font-family: "Source Sans Pro", sans-serif;
+}
+#raleway {
+  font-family: "Raleway", sans-serif;
+}
+#questrial {
+  font-family: "Questrial", sans-serif;
+}
+div {
+  float: left;
+  // min-height: 1px;
+}
+body {
+  padding: 0;
 }
