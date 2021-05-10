@@ -1,36 +1,25 @@
 @use '_modules/variables' as *;
-html {
-  // background-color: $highlight_one;
-  transition: 5s;
-  transform: rotate(180);
-  box-sizing: border-box;
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.carousel .carousel-item {
+  max-height: calc(100vh - 56px);
+  height: 100%;
+  width: 100%;
 }
 
-#center {
-  // width: calc(100% / 12 * 6);
+.carousel-item img {
+  object-fit: cover;
+  object-position: center 46%;
+  margin: auto;
+  height: calc(100vh - 56px);
 }
-#buffer {
-  width: calc(100% / 12 * 3);
-}
-#ubuntu {
-  font-family: "Ubuntu", sans-serif;
-}
-#open-sans {
-  font-family: "Open Sans", sans-serif;
-}
-#source-sans-pro {
-  font-family: "Source Sans Pro", sans-serif;
-}
-#raleway {
-  font-family: "Raleway", sans-serif;
-}
-#questrial {
-  font-family: "Questrial", sans-serif;
-}
-div {
-  float: left;
-  // min-height: 1px;
-}
-body {
+
+a.navbar-brand,
+a.navbar-bran img {
   padding: 0;
+}
+
+#mobile-navbar-text {
+  width: 100%;
+  text-align: center;
 }
