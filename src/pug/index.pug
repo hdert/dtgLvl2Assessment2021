@@ -1,17 +1,25 @@
 doctype html
-html 
-  head 
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel="stylesheet" href="css/styles.css")
-    link(rel="preconnect" href="https://fonts.gstatic.com")
-    link(href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Questrial&family=Raleway&family=Source+Sans+Pro&family=Ubuntu&display=swap"
-    rel="stylesheet")
-  body
-    div#buffer
-    div#center
-      p#ubuntu Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra et ultrices neque ornare aenean. Quis commodo odio aenean sed adipiscing diam donec adipiscing tristique. Nunc sed id semper risus in hendrerit. Lorem dolor sed viverra ipsum nunc. Et egestas quis ipsum suspendisse ultrices. Elementum pulvinar etiam non quam lacus. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Cras tincidunt lobortis feugiat vivamus at. Id consectetur purus ut faucibus. Viverra suspendisse potenti nullam ac. Consectetur libero id faucibus nisl. Ut sem nulla pharetra diam. Lorem donec massa sapien faucibus et molestie. Sed arcu non odio euismod lacinia. Elementum sagittis vitae et leo duis ut diam. Vehicula ipsum a arcu cursus vitae. Neque vitae tempus quam pellentesque nec nam aliquam
-      p#open-sans Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra et ultrices neque ornare aenean. Quis commodo odio aenean sed adipiscing diam donec adipiscing tristique. Nunc sed id semper risus in hendrerit. Lorem dolor sed viverra ipsum nunc. Et egestas quis ipsum suspendisse ultrices. Elementum pulvinar etiam non quam lacus. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Cras tincidunt lobortis feugiat vivamus at. Id consectetur purus ut faucibus. Viverra suspendisse potenti nullam ac. Consectetur libero id faucibus nisl. Ut sem nulla pharetra diam. Lorem donec massa sapien faucibus et molestie. Sed arcu non odio euismod lacinia. Elementum sagittis vitae et leo duis ut diam. Vehicula ipsum a arcu cursus vitae. Neque vitae tempus quam pellentesque nec nam aliquam
-      p#source-sans-pro Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra et ultrices neque ornare aenean. Quis commodo odio aenean sed adipiscing diam donec adipiscing tristique. Nunc sed id semper risus in hendrerit. Lorem dolor sed viverra ipsum nunc. Et egestas quis ipsum suspendisse ultrices. Elementum pulvinar etiam non quam lacus. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Cras tincidunt lobortis feugiat vivamus at. Id consectetur purus ut faucibus. Viverra suspendisse potenti nullam ac. Consectetur libero id faucibus nisl. Ut sem nulla pharetra diam. Lorem donec massa sapien faucibus et molestie. Sed arcu non odio euismod lacinia. Elementum sagittis vitae et leo duis ut diam. Vehicula ipsum a arcu cursus vitae. Neque vitae tempus quam pellentesque nec nam aliquam
-      p#raleway Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra et ultrices neque ornare aenean. Quis commodo odio aenean sed adipiscing diam donec adipiscing tristique. Nunc sed id semper risus in hendrerit. Lorem dolor sed viverra ipsum nunc. Et egestas quis ipsum suspendisse ultrices. Elementum pulvinar etiam non quam lacus. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Cras tincidunt lobortis feugiat vivamus at. Id consectetur purus ut faucibus. Viverra suspendisse potenti nullam ac. Consectetur libero id faucibus nisl. Ut sem nulla pharetra diam. Lorem donec massa sapien faucibus et molestie. Sed arcu non odio euismod lacinia. Elementum sagittis vitae et leo duis ut diam. Vehicula ipsum a arcu cursus vitae. Neque vitae tempus quam pellentesque nec nam aliquam
-      p#questrial Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra et ultrices neque ornare aenean. Quis commodo odio aenean sed adipiscing diam donec adipiscing tristique. Nunc sed id semper risus in hendrerit. Lorem dolor sed viverra ipsum nunc. Et egestas quis ipsum suspendisse ultrices. Elementum pulvinar etiam non quam lacus. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Cras tincidunt lobortis feugiat vivamus at. Id consectetur purus ut faucibus. Viverra suspendisse potenti nullam ac. Consectetur libero id faucibus nisl. Ut sem nulla pharetra diam. Lorem donec massa sapien faucibus et molestie. Sed arcu non odio euismod lacinia. Elementum sagittis vitae et leo duis ut diam. Vehicula ipsum a arcu cursus vitae. Neque vitae tempus quam pellentesque nec nam aliquam
-    div#buffer
+include includes/head.pug
+body
+  include includes/header.pug
+  .carousel.slide#carousel(data-bs-ride="carousel")
+    .carousel-indicators
+      button.active(type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide One")
+    .carousel-inner 
+      .carousel-item.active 
+        img(src="img/124A5933.jpg" alt="Students smiling").d-block.w-100
+        .carousel-caption
+          h5 The Journey to Success.
+          p
+            | Mountainview High School is a co-educational state high school located in the thriving town of Timaru, in the South Island of New Zealand.
+            br
+            | The school runs from year nine to thirteen. The school has a roll of 453 students as of November 2020; more than 20 are International students.
+            br
+            |  The school operates a house system, known as Whānau.
+    button.carousel-control-prev(type="button" data-bs-target="#carousel" data-bs-slide="prev")
+      span.carousel-control-prev-icon(aria-hidden="true")
+      span.visually-hidden Previous 
+    button.carousel-control-next(type="button" data-bs-target="#carousel" data-bs-slide="next")
+      span.carousel-control-next-icon(aria-hidden="true")
+      span.visually-hidden Next
+  include includes/footer.pug
