@@ -1,7 +1,9 @@
 doctype html
 include includes/head.pug
++head("Home | MVHS")
 body
   include includes/header.pug
+  +header("index")
   .carousel.slide#carousel(data-bs-ride="carousel")
     .carousel-indicators
       button.active(type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide One")
