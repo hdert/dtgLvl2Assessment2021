@@ -11,7 +11,7 @@
     "css-prefix": "postcss --replace css/styles.css --use autoprefixer --map",
     "css-purge": "purgecss --keyframes --css css/styles.css --content index.html \"node_modules/bootstrap/js/dist/{util,modal}.js\" --output css/",
     "css": "npm-run-all css-compile css-prefix",
-    "html": "pug src/pug/ --out ./",
+    "html": "pug --pretty src/pug/ --out ./",
     "js": "tsc --outDir js/ src/ts/*",
     "start": "npm-run --parallel watch",
     "watch": "nodemon -e pug,scss,ts -x \"npm run build\""
