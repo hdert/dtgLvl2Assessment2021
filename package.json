@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run css-lint && npm run css",
-    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css src/scss/styles.scss:css/styles.css",
     "css-lint": "stylelint src/scss/",
-    "css-prefix": "postcss --replace css/styles.css --use autoprefixer --map",
-    "css-purge": "purgecss --keyframes --css css/styles.css --content index.html \"node_modules/bootstrap/js/dist/{util,modal}.js\" --output css/",
-    "css": "npm-run-all css-compile css-prefix",
-    "start": "parcel serve ./src/pug/index.pug"
+    "css-prefix": "postcss --replace dist/*.css --use autoprefixer --map",
+    "css-purge": "purgecss --keyframes --css dist/*.css --content dist/*.html --output dist/",
+    "css": "npm-run-all css-prefix css-purge css-lint",
+    "start": "parcel serve ./src/pug/*.pug"
   },
   "dependencies": {
     "bootstrap": "^5.0.0-beta3",
