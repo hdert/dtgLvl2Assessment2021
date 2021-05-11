@@ -1,15 +1,15 @@
 doctype html
-include includes/head.pug
+include ../includes/head.pug
 +head("Home | MVHS")
 body
-  include includes/header.pug
+  include ../includes/header.pug
   +header("index")
   .carousel.slide#carousel(data-bs-ride="carousel")
     .carousel-indicators
       button.active(type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide One")
     .carousel-inner 
       .carousel-item.active 
-        img(src="img/124A5933.jpg" alt="Students smiling").d-block.w-100
+        img(src="../../img/124A5933.jpg" alt="Students smiling").d-block.w-100
         .carousel-caption
           h2 The Journey to Success.
           p
@@ -24,4 +24,4 @@ body
     button.carousel-control-next(type="button" data-bs-target="#carousel" data-bs-slide="next")
       span.carousel-control-next-icon(aria-hidden="true")
       span.visually-hidden Next
-  include includes/footer.pug
+  include ../includes/footer.pug

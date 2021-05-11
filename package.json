@@ -5,16 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run css-lint && npm run css",
-    "build": "npm-run-all css html js",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css src/scss/styles.scss:css/styles.css",
     "css-lint": "stylelint src/scss/",
     "css-prefix": "postcss --replace css/styles.css --use autoprefixer --map",
     "css-purge": "purgecss --keyframes --css css/styles.css --content index.html \"node_modules/bootstrap/js/dist/{util,modal}.js\" --output css/",
     "css": "npm-run-all css-compile css-prefix",
-    "html": "pug --pretty src/pug/ --out ./",
-    "js": "tsc --outDir js/ src/ts/*",
-    "start": "npm-run --parallel watch",
-    "watch": "nodemon -e pug,scss,ts -x \"npm run build\""
+    "start": "parcel serve ./src/pug/index.pug"
   },
   "dependencies": {
     "bootstrap": "^5.0.0-beta3",
@@ -23,14 +19,19 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
+    "@parcel/transformer-pug": "^2.0.0-beta.2",
+    "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
     "autoprefixer": "^10.2.5",
     "nodemon": "^2.0.7",
     "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.5",
     "postcss": "^8.2.8",
     "postcss-cli": "^8.3.1",
     "purgecss": "^4.0.2",
+    "sass": "^1.32.12",
     "stylelint": "^13.12.0",
-    "stylelint-config-twbs-bootstrap": "^2.1.0"
+    "stylelint-config-twbs-bootstrap": "^2.1.0",
+    "typescript": "^4.2.4"
   },
   "repository": {
     "type": "git",
