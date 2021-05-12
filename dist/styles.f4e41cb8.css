@@ -10750,4 +10750,12 @@ textarea.form-control-lg {
   backdrop-filter: blur(4px);
 }
 
+@media (max-width: 576px) {
+  #main-motto {
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=/styles.f4e41cb8.css.map */
