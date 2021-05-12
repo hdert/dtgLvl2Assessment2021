@@ -17,3 +17,8 @@
 .navbar-brand {
   padding: 0;
 }
+
+#carousel-item-one-text {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.533), rgba(0, 0, 0, 0.533));
+  backdrop-filter: blur(4px);
+}
