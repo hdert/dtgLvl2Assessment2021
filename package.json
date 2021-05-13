@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "npm run css-lint && npm run css",
     "css-lint": "stylelint src/scss/",
     "css-prefix": "postcss --replace dist/*.css --use autoprefixer --map",
     "css-purge": "purgecss --keyframes --css dist/*.css --content dist/*.html --output dist/",
     "css": "run-s css-prefix css-purge css-lint",
-    "start": "parcel serve ./src/pug/*.pug",
-    "build": "parcel build ./src/pug/*.pug"
+    "start": "parcel serve --dist-dir 'dev/' './src/pug/*.pug'",
+    "parcel-build": "parcel build --dist-dir 'dist/' './src/pug/*.pug'",
+    "build": "run-s parcel-build css"
   },
   "dependencies": {
     "bootstrap": "^5.0.0-beta3",
