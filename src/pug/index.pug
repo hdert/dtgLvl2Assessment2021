@@ -1,27 +1,28 @@
 doctype html
-include ../includes/head.pug
-+head("Home | MVHS")
-body
-  include ../includes/header.pug
-  +header("index")
-  .carousel.slide#carousel(data-bs-ride="carousel")
-    .carousel-indicators
-      button.active(type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide One")
-    .carousel-inner 
-      .carousel-item.active 
-        img(src="../img/124A5933.jpg" alt="Students smiling").d-block.w-100
-        .carousel-caption.text-white#carousel-item-one-text
-          h2 The Journey to Success.
-          p
-            | Mountainview High School is a co-educational state high school located in the thriving town of Timaru, in the South Island of New Zealand.
-            br
-            | The school runs from year nine to thirteen. The school has a roll of 453 students as of November 2020; more than 20 are International students.
-            br
-            |  The school operates a house system, known as Whānau.
-    button.carousel-control-prev(type="button" data-bs-target="#carousel" data-bs-slide="prev")
-      span.carousel-control-prev-icon(aria-hidden="true")
-      span.visually-hidden Previous 
-    button.carousel-control-next(type="button" data-bs-target="#carousel" data-bs-slide="next")
-      span.carousel-control-next-icon(aria-hidden="true")
-      span.visually-hidden Next
-  include ../includes/footer.pug
+html(lang="en")
+  include ../includes/head.pug
+  +head("Home | MVHS")
+  body
+    include ../includes/header.pug
+    +header("index")
+    .carousel.slide#carousel(data-bs-ride="carousel")
+      .carousel-indicators
+        button.active(type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide One")
+      .carousel-inner 
+        .carousel-item.active 
+          img(src="../img/124A5933.jpg" alt="Students smiling").d-block.w-100
+          .carousel-caption.text-white#carousel-item-one-text
+            h2 The Journey to Success.
+            p
+              | Mountainview High School is a co-educational state high school located in the thriving town of Timaru, in the South Island of New Zealand.
+              br
+              | The school runs from year nine to thirteen. The school has a roll of 453 students as of November 2020; more than 20 are International students.
+              br
+              |  The school operates a house system, known as Whānau.
+      button.carousel-control-prev(type="button" data-bs-target="#carousel" data-bs-slide="prev")
+        span.carousel-control-prev-icon(aria-hidden="true")
+        span.visually-hidden Previous 
+      button.carousel-control-next(type="button" data-bs-target="#carousel" data-bs-slide="next")
+        span.carousel-control-next-icon(aria-hidden="true")
+        span.visually-hidden Next
+    include ../includes/footer.pug
