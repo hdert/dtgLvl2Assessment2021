@@ -2,14 +2,14 @@
   "name": "dtglvl2assessment2021",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "npm run css-lint && npm run css",
     "css-lint": "stylelint src/scss/",
     "css-prefix": "postcss --replace dist/*.css --use autoprefixer --map",
     "css-purge": "purgecss --keyframes --css dist/*.css --content dist/*.html --output dist/",
-    "css": "npm-run-all css-prefix css-purge css-lint",
-    "start": "parcel serve ./src/pug/*.pug"
+    "css": "run-s css-prefix css-purge css-lint",
+    "start": "parcel serve ./src/pug/*.pug",
+    "build": "parcel build ./src/pug/*.pug"
   },
   "dependencies": {
     "bootstrap": "^5.0.0-beta3",
