@@ -29,4 +29,7 @@
     width: 100%;
     text-align: center;
   }
+  .carousel-item img {
+    height: calc(100vh - 96px);
+  }
 }
