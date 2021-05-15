@@ -8,17 +8,31 @@ html(lang="en")
     .carousel.slide#carousel(data-bs-ride="carousel")
       .carousel-indicators
         button.active(type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide One")
-      .carousel-inner 
-        .carousel-item.active 
-          img(src="../img/124A5933.jpg" alt="Students smiling").d-block.w-100
-          .carousel-caption.text-white#carousel-item-one-text
-            h2 The Journey to Success.
-            p
-              | Mountainview High School is a co-educational state high school located in the thriving town of Timaru, in the South Island of New Zealand.
-              br
-              | The school runs from year nine to thirteen. The school has a roll of 453 students as of November 2020; more than 20 are International students.
-              br
-              |  The school operates a house system, known as Whānau.
+        button(type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide Two")
+        button(type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide Three")
+        button(type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide Four")
+        button(type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide Five")
+      .carousel-inner.text-white
+        .carousel-item.active#carousel-item-1
+          img(src="../img/IMG_4048.JPG" alt="Four students smiling with their arms over each others shoulders.").d-block.w-100
+          .carousel-caption
+            h1 Whanaungatanga
+        .carousel-item#carousel-item-2
+          img(src="../img/P1030255.JPG").d-block.w-100
+          .carousel-caption
+            h1 Manaakitanga
+        .carousel-item#carousel-item-3
+          img(src="../img/more fun than maths.jpg").d-block.w-100
+          .carousel-caption
+            h1 Kaitiakitanga
+        .carousel-item#carousel-item-4
+          img(src="../img/IMG_4677[1].JPG").d-block.w-100
+          .carousel-caption
+            h1 Rangatiratanga
+        .carousel-item#carousel-item-5
+          img(src="../img/adj senior science.jpg").d-block.w-100
+          .carousel-caption
+            h1 Pūkengatanga
       button.carousel-control-prev(type="button" data-bs-target="#carousel" data-bs-slide="prev")
         span.carousel-control-prev-icon(aria-hidden="true")
         span.visually-hidden Previous 

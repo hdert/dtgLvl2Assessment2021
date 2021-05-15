@@ -1,27 +1,30 @@
 @use "_modules/variables" as *;
+@use "_modules/mixins" as *;
 @import "../../node_modules/bootstrap/scss/bootstrap";
-
-.carousel .carousel-item {
-  width: 100%;
-  height: 100%;
-  max-height: calc(100vh - 56px);
-}
 
 .carousel-item img {
   object-fit: cover;
-  object-position: center 46%;
   height: calc(100vh - 56px);
   margin: auto;
 }
+
+@include gen-carousel-image-center(
+  49.9% 39%,
+  51% 39.4%,
+  48.7% 40%,
+  67.1% 30.4%,
+  64.9% 51.8%
+);
 
 .navbar-brand {
   padding: 0;
 }
 
-#carousel-item-one-text {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.533), rgba(0, 0, 0, 0.533));
+.carousel-caption {
   backdrop-filter: blur(4px);
 }
+
+@include gen-carousel-text-opacities(0.533 0.533 0.533 0.533 0.533);
 
 @media (max-width: 576px) {
   #main-motto {
