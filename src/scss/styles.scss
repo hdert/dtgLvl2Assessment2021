@@ -1,6 +1,5 @@
 @use "_modules/variables" as *;
 @use "_modules/mixins" as *;
-@import "../../node_modules/bootstrap/scss/bootstrap";
 
 .carousel-item img {
   object-fit: cover;

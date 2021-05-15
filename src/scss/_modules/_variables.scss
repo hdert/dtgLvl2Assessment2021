@@ -3,9 +3,11 @@ $old-highlight-one: #03644e;
 $highlight-two: #c80b27;
 $old-highlight-two: #f6303e;
 $background-color: #f2f2f2;
-$color: #242424;
-$primary: $highlight-one;
-$secondary: $color;
+$primary: $background-color;
+$secondary: $highlight-one;
 $font-family-sans-serif: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+$color: $gray-900;
+$body-color: $color;
