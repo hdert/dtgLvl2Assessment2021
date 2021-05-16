@@ -1,4 +1,4 @@
-mixin head(title, description,image)
+mixin head(title, description, image, large)
    head
       title= title
       meta(name="description" content=description)
@@ -9,6 +9,10 @@ mixin head(title, description,image)
       meta(property="og:description" content=description)
       meta(property="og:image" content=image)
       meta(property="og:type" content="website")
+      meta(name="twitter:title" content=title)
+      meta(name="twitter:description" content=description)
+      meta(name="twitter:image" content=image)
+      meta(name="twitter:card" content=large === true ? "summary_large_image" : 'summary')
       meta(name="viewport" content="width=device-width, initial-scale=1")
       link(rel="stylesheet" href="../scss/styles.scss")
       link(rel="preconnect" href="https://fonts.gstatic.com")
