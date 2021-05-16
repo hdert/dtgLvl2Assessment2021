@@ -1,8 +1,17 @@
 doctype html 
 html(lang="en")
   include ../includes/head.pug
-  +head("Sports | MVHS", "The page to find out all about our sporting opportunities", "../img/IMG_4048.JPG", true)
-  body 
+  +head("Sports | MVHS", "The page to find out all about our sporting opportunities", "../img/IMG_4048.JPG", true, "sports", "Four students smiling with their arms over each others shoulders.")
+  body.d-flex.flex-column.min-vh-100
     include ../includes/header.pug 
     +header("sports")
+    .container.mt-3
+      h1 Sport 
+      p At Mountainview we pride ourselves in giving our students as many sporting opportunities as possible.
+        br
+        | All the major sports are played but we also add such sports as bowls, shooting and archery for those who are looking for something different.
+      h2 Sport Registration 
+      p Sports are offered at different age levels and this often means there is something for everyone, regardless of age or ability.
+        br
+        | The school participates in at least two exchanges with other schools which may also include chess, debating and theatre sports.
     include ../includes/footer.pug 

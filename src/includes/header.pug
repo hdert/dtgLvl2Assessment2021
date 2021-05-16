@@ -1,19 +1,19 @@
 mixin nav-link(page, activePage, pageName)
-  a.nav-link(href=page + '.pug' class=page === activePage ? "active" : undefined)= pageName
+  if page === activePage
+    a.nav-link.active(href=page + ".pug" aria-current="page")= pageName
+  else
+    a.nav-link(href=page + ".pug")= pageName
 
 mixin header(activePage)
-  .navbar.navbar-expand-md.navbar-dark.bg-secondary.sticky-top
-    .container-fluid
-      a.navbar-brand(href="index.pug")
-        img(src="../img/MVHS crest.png" alt="MVHS logo" width="40" height="40")
-      span.navbar-text.d-none.d-sm-block.d-md-none Empowering students to thrive in our Whanau culture
-      .collapse.navbar-collapse#navbarContent
-        .navbar-nav
-          +nav-link("index", activePage, "Home")
-          +nav-link("sports", activePage, "Sports")
-          //- +nav-link("staff", activePage, "Staff")
-      button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls=".navbarContent" aria-label="Toggle Navigation")
-        span.navbar-toggler-icon
-      span.navbar-text.d-sm-none.d-md-block#main-motto Empowering students to thrive in our Whanau culture
-      
+  nav.navbar.navbar-expand-md.navbar-dark.bg-secondary.sticky-top.container-fluid
+    a.navbar-brand(href="index.pug")
+      img(src="../img/MVHS crest.png" alt="MVHS Crest" height="40")
+    .collapse.navbar-collapse.order-2#navbarContent
+      .navbar-nav
+        +nav-link("index", activePage, "Home")
+        +nav-link("sports", activePage, "Sports")
+        //- +nav-link("staff", activePage, "Staff")
+    button.navbar-toggler.order-3(type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="#navbarContent" aria-label="Toggle Drop-Down Navigation")
+      span.navbar-toggler-icon
+    span.navbar-text.order-4.order-sm-1.order-md-4.text-center#motto Empowering students to thrive in our Whanau culture
       

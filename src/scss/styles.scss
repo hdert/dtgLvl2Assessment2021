@@ -26,10 +26,8 @@
 @include gen-carousel-text-opacities(0.533 0.533 0.533 0.533 0.533);
 
 @media (max-width: 576px) {
-  #main-motto {
-    flex: 0 0 auto;
+  #motto {
     width: 100%;
-    text-align: center;
   }
   .carousel-item img {
     height: calc(100vh - 96px);
