@@ -1,11 +1,20 @@
-footer.bg-secondary.text-light.overflow-auto.mt-auto
-  .container.my-3
-    .col-md-4
-      h5 Contact Us:
-      p 
-        a(href="tel:036847039") Phone: 03 684 7039
-        br
-        a(href="mailto:admin@mountainview.school.nz") Email: admin@mountainview.school.nz
-    .col-md-4
-    .col-md-4
-script(src="../ts/main.ts")
+include links.pug
+mixin footer(activePage)
+  footer.bg-secondary.text-light.overflow-auto.mt-auto
+    .container.my-3.nav
+      .col-12.col-md-4
+        h5 Contact Us:
+        p 
+          a(href="tel:036847039") Phone: 03 684 7039
+          br
+          a(href="mailto:admin@mountainview.school.nz") Email: admin@mountainview.school.nz
+      .col-12.col-md-4
+        +footer-link("index", "Home")
+        +footer-link("sports", "Sport")
+        +fake-footer-link("Wellbeing")
+      .col-12.col-md-4
+        +footer-link("staff", "Staff")
+        +fake-footer-link("Learning Areas")
+        +fake-footer-link("News")
+        +fake-footer-link("Contact Us")
+  script(src="../ts/main.ts")

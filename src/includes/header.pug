@@ -1,19 +1,19 @@
-mixin nav-link(page, activePage, pageName)
-  if page === activePage
-    a.nav-link.active(href=page + ".pug" aria-current="page")= pageName
-  else
-    a.nav-link(href=page + ".pug")= pageName
+include links.pug
 
 mixin header(activePage)
-  nav.navbar.navbar-expand-md.navbar-dark.bg-secondary.sticky-top.container-fluid
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-secondary.sticky-top.container-fluid
     a.navbar-brand(href="index.pug")
       img(src="../img/MVHS crest.png" alt="MVHS Crest" height="40")
-    .collapse.navbar-collapse.order-2#navbarContent
+    .collapse.navbar-collapse.order-1#navbarContent
       .navbar-nav
         +nav-link("index", activePage, "Home")
         +nav-link("sports", activePage, "Sports")
-        //- +nav-link("staff", activePage, "Staff")
-    button.navbar-toggler.order-3(type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="#navbarContent" aria-label="Toggle Drop-Down Navigation")
+        +nav-link("staff", activePage, "Staff")
+        +fake-nav-link("Wellbeing")
+        +fake-nav-link("Learning Areas")
+        +fake-nav-link("News")
+        +fake-nav-link("Contact Us")
+    button.navbar-toggler.order-2(type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="#navbarContent" aria-label="Toggle Drop-Down Navigation")
       span.navbar-toggler-icon
-    span.navbar-text.order-4.order-sm-1.order-md-4.text-center#motto Empowering students to thrive in our Whanau culture
+    span.navbar-text.order-4.order-sm-0.order-lg-4.text-center#motto Empowering students to thrive in our Whanau 
       
