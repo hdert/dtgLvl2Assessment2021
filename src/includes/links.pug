@@ -8,7 +8,7 @@ mixin fake-nav-link(pageName)
   a.nav-link(href="#")= pageName
 
 mixin footer-link(page, pageName)
-  a.nav-link(href=page + ".pug")= pageName 
+  a.nav-link.px-0(href=page + ".pug")= pageName 
 
 mixin fake-footer-link(pageName)
-  a.nav-link(href="#")= pageName
+  a.nav-link.px-0(href="#")= pageName
