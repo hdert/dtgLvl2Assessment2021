@@ -5,38 +5,75 @@ html(lang="en")
   body.d-flex.flex-column.min-vh-100
     include ../includes/header.pug
     +header("index")
-    .carousel.slide#carousel(data-bs-ride="carousel")
+    #carousel.carousel.slide(data-bs-ride="carousel")
       .carousel-indicators
-        button.active(type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide One")
-        button(type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide Two")
-        button(type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide Three")
-        button(type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide Four")
-        button(type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide Five")
+        button.active(
+          type="button",
+          data-bs-target="#carousel",
+          data-bs-slide-to="0",
+          aria-current="true",
+          aria-label="Slide One"
+        )
+        button(
+          type="button",
+          data-bs-target="#carousel",
+          data-bs-slide-to="1",
+          aria-label="Slide Two"
+        )
+        button(
+          type="button",
+          data-bs-target="#carousel",
+          data-bs-slide-to="2",
+          aria-label="Slide Three"
+        )
+        button(
+          type="button",
+          data-bs-target="#carousel",
+          data-bs-slide-to="3",
+          aria-label="Slide Four"
+        )
+        button(
+          type="button",
+          data-bs-target="#carousel",
+          data-bs-slide-to="4",
+          aria-label="Slide Five"
+        )
       .carousel-inner.text-white
-        .carousel-item.active#carousel-item-1
-          img(src="../img/IMG_4048.JPG" alt="Four students smiling with their arms over each others shoulders.").d-block.w-100
+        #carousel-item-1.carousel-item.active
+          img.d-block.w-100(
+            src="../img/IMG_4048.JPG",
+            alt="Four students smiling with their arms over each others shoulders."
+          )
           .carousel-caption
             h1 Whanaungatanga
-        .carousel-item#carousel-item-2
-          img(src="../img/P1030255.JPG").d-block.w-100
+        #carousel-item-2.carousel-item
+          img.d-block.w-100(src="../img/P1030255.JPG")
           .carousel-caption
             h1 Manaakitanga
-        .carousel-item#carousel-item-3
-          img(src="../img/more fun than maths.jpg").d-block.w-100
+        #carousel-item-3.carousel-item
+          img.d-block.w-100(src="../img/more fun than maths.jpg")
           .carousel-caption
             h1 Kaitiakitanga
-        .carousel-item#carousel-item-4
-          img(src="../img/IMG_4677[1].JPG").d-block.w-100
+        #carousel-item-4.carousel-item
+          img.d-block.w-100(src="../img/IMG_4677[1].JPG")
           .carousel-caption
             h1 Rangatiratanga
-        .carousel-item#carousel-item-5
-          img(src="../img/adj senior science.jpg").d-block.w-100
+        #carousel-item-5.carousel-item
+          img.d-block.w-100(src="../img/adj senior science.jpg")
           .carousel-caption
             h1 Pūkengatanga
-      button.carousel-control-prev(type="button" data-bs-target="#carousel" data-bs-slide="prev")
+      button.carousel-control-prev(
+        type="button",
+        data-bs-target="#carousel",
+        data-bs-slide="prev"
+      )
         span.carousel-control-prev-icon(aria-hidden="true")
-        span.visually-hidden Previous 
-      button.carousel-control-next(type="button" data-bs-target="#carousel" data-bs-slide="next")
+        span.visually-hidden Previous
+      button.carousel-control-next(
+        type="button",
+        data-bs-target="#carousel",
+        data-bs-slide="next"
+      )
         span.carousel-control-next-icon(aria-hidden="true")
         span.visually-hidden Next
     include ../includes/footer.pug
