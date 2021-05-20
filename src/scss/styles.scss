@@ -7,6 +7,13 @@
   margin: auto;
 }
 
+.card picture img {
+  object-fit: cover;
+  object-position: center;
+  margin: auto;
+  height: 20vh;
+}
+
 @include gen-carousel-image-center(
   49.9% 39%,
   51% 39.4%,

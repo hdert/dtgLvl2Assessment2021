@@ -1,48 +1,61 @@
+mixin gen-pictures(...attrs)
+  each list_of_attrs in attrs
+    .col-12.col-sm-6.col-md-4.col-lg-3.card
+      picture
+        +gen-sources(list_of_attrs[0])
+        img.card-img.img-fluid(src=`../img/${list_of_attrs[1]}`, alt=list_of_attrs[2])
+
+mixin gen-sources(sources)
+  each source in sources 
+    source(srcset=`../img/${source}`)
+
 doctype html 
 html(lang="en")
   include ../includes/head.pug
   +head("Sports | MVHS", "The page to find out all about our sporting opportunities", "../img/IMG_4048.JPG", true, "sports", "Four students smiling with their arms over each others shoulders.")
   body.d-flex.flex-column.min-vh-100
-    include ../includes/header.pug 
+    include ../includes/header.pug
     +header("sports")
     .container.mt-3
-      h1 Sport 
+      h1 Sport
       p At Mountainview we pride ourselves in giving our students as many sporting opportunities as possible.
         br
         | All the major sports are played but we also add such sports as bowls, shooting and archery for those who are looking for something different.
-      h2 Sport Registration 
+      h2 Sport Registration
       p Sports are offered at different age levels and this often means there is something for everyone, regardless of age or ability.
         br
         | The school participates in at least two exchanges with other schools which may also include chess, debating and theatre sports.
       h2 The range of sports includes:
       ul.d-flex.flex-wrap.align-items-start
-        div.col-12.col-sm-6.d-flex.flex-wrap
-          div.col-12.col-md-6
+        .col-12.col-sm-6.d-flex.flex-wrap
+          .col-12.col-md-6
             li Archery
             li Badminton
             li Basketball
             li Claybird Target Shooting
             li Cricket
             li Cycling
-          div.col-12.col-md-6
+          .col-12.col-md-6
             li Futsal
             li Golf
             li Hockey
             li Summer Hockey
             li Lawn Bowls
             li Multisport
-        div.col-12.col-sm-6.d-flex.flex-wrap
-          div.col-12.col-md-6
+        .col-12.col-sm-6.d-flex.flex-wrap
+          .col-12.col-md-6
             li Netball
             li Pool/Darts
             li Rock climbing
             li Rugby
             li Smallbore rifle shooting
             li Soccer
-          div.col-12.col-md-6
+          .col-12.col-md-6
             li Softball
             li Tennis
             li Touch
             li Volleyball
-    include ../includes/footer.pug 
+      .d-flex.flex-wrap
+        +gen-pictures([["232A5926.jpg"], "232A5926.jpg", "Side-on of student's legs sticking out of water after diving into swimming pool"], [["20170813_115205.jpg"], "20170813_115205.jpg", "Four students shooting clay birds with two supervisors"], [["adjOutdoorEducation.jpg"], "adjOutdoorEducation.jpg", "Seven students rowing in a rubber dingy with a coach"], [["IMG_0040.jpg"], "IMG_0040.jpg", "Five students standing with arms over each others shoulders, splattered with powerder paint"], [["IMG_3068.JPG"], "IMG_3068.JPG", "Student running barefooted on grass running track"], [["IMG_4061.JPG"], "IMG_4061.JPG", "Students walking whilst balancing tennis balls on spoons"], [["IMG_4353.JPG"], "IMG_4353.JPG", "Student ready to throw javelin"], [["IMG_4515.JPG"], "IMG_4515.JPG", "Students in line throwing gumboots"], [["IMG_4532.JPG"], "IMG_4532.JPG", "Student smiling, fallen over in long jump sand pit"], [["IMG_8213.JPG"], "IMG_8213.JPG", "MVHS netball team of ten, group photo with coach"], [["IMG_20210312_110620.jpg"], "IMG_20210312_110620.jpg", "Seven students and two teachers in group photo with obstacle course safety gear on"])
+    include ../includes/footer.pug
     +footer("sports")
