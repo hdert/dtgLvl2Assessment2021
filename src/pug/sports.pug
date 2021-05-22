@@ -5,14 +5,14 @@ mixin gen-pictures(...attrs)
       picture
         +gen-sources(list_of_attrs[0])
         img.card-img.img-fluid(
-          src=`../img/${list_of_attrs[1]}`,
+          src=`../img/optimized/${list_of_attrs[1]}`,
           alt=list_of_attrs[2]
         )
       - iteration += 1;
 
 mixin gen-sources(sources)
   each source in sources 
-    source(srcset=`../img/${source}`)
+    source(srcset=`../img/optimized/${source}`)
 
 doctype html 
 html(lang="en")
