@@ -2,19 +2,24 @@ include links.pug
 mixin footer(activePage)
   footer.bg-secondary.text-light.overflow-auto.mt-auto
     .container.my-3.nav.text-break
-      .col-12.col-md-4.ps-3
+      .col-12.col-md-6.ps-3
         h5 Contact Us:
         p 
           a(href="tel:036847039") Phone: 03 684 7039
           br
           a(href="mailto:admin@mountainview.school.nz") Email: admin@mountainview.school.nz
-      .col-12.col-md-4.ps-3
-        +footer-link("index", "Home")
-        +footer-link("sports", "Sport")
-        +fake-footer-link("Wellbeing")
-      .col-12.col-md-4.ps-3
-        +footer-link("staff", "Staff")
-        +fake-footer-link("Learning Areas")
-        +fake-footer-link("News")
-        +fake-footer-link("Contact Us")
+        p
+          | 97 Pages Road, Private Bag 907,
+          | Timaru 7940, South Canterbury,
+          | New Zealand
+      nav.col-12.col-md-6.d-flex.flex-wrap
+        section.col-12.col-md-6.ps-3
+          +footer-link("index", "Home")
+          +footer-link("sports", "Sport")
+          +fake-footer-link("Wellbeing")
+        section.col-12.col-md-6.ps-3
+          +footer-link("staff", "Staff")
+          +fake-footer-link("Learning Areas")
+          +fake-footer-link("News")
+          +fake-footer-link("Contact Us")
   script(src="../ts/main.ts")
