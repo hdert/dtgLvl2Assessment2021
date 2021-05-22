@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
   include ../includes/head.pug
-  +head("Home | MVHS", "The hub for Mountainview High School related information", "../img/MVHS crest.png", false, "index", "MVHS crest")
+  +head("Home | MVHS", "The hub for Mountainview High School related information", "../img/mvhs_crest.png", false, "index", "MVHS crest")
   body.d-flex.flex-column.min-vh-100
     include ../includes/header.pug
     +header("index")
@@ -41,27 +41,39 @@ html(lang="en")
       .carousel-inner.text-white
         #carousel-item-1.carousel-item.active
           img.d-block.w-100(
-            src="../img/IMG_4048.JPG",
+            src="../img/img_4048.jpg",
             alt="Four students smiling with their arms over each others shoulders."
           )
           .carousel-caption
-            h1 Whanaungatanga
+            h2 Whanaungatanga
         #carousel-item-2.carousel-item
-          img.d-block.w-100(src="../img/P1030255.JPG")
+          img.d-block.w-100(
+            src="../img/p1030255.jpg",
+            alt="Teacher showing three students looking at a computer."
+          )
           .carousel-caption
-            h1 Manaakitanga
+            h2 Manaakitanga
         #carousel-item-3.carousel-item
-          img.d-block.w-100(src="../img/more fun than maths.jpg")
+          img.d-block.w-100(
+            src="../img/more-fun-than-maths.jpg",
+            alt="Two students feeding a calf milk."
+          )
           .carousel-caption
-            h1 Kaitiakitanga
+            h2 Kaitiakitanga
         #carousel-item-4.carousel-item
-          img.d-block.w-100(src="../img/IMG_4677[1].JPG")
+          img.d-block.w-100(
+            src="../img/img_4677.jpg",
+            alt="Three students presenting to teachers with a digital slideshow."
+          )
           .carousel-caption
-            h1 Rangatiratanga
+            h2 Rangatiratanga
         #carousel-item-5.carousel-item
-          img.d-block.w-100(src="../img/adj senior science.jpg")
+          img.d-block.w-100(
+            src="../img/adj-senior-science.jpg",
+            alt="Student watching another student use a dropper to add colored liquid to a test tube"
+          )
           .carousel-caption
-            h1 Pūkengatanga
+            h2 Pūkengatanga
       button.carousel-control-prev(
         type="button",
         data-bs-target="#carousel",
@@ -84,7 +96,7 @@ html(lang="en")
         | The school runs from year nine to thirteen. The school has a roll of 453 students as of November 2020; more than 20 are International students.
         | The school operates a house system, known as Whānau.
       h2 Empowering students to thrive in our Whānau culture.
-      section.border-start.border-4.border-secondary.bg-primary.pt-2.mb-3.pb-1.ps-3
+      .border-start.border-4.border-secondary.bg-primary.pt-2.mb-3.pb-1.ps-3
         p.mb-2
           | I am proud to welcome you to the Mountainview website and trust that you will find the information that you need.
           | After reading, I am sure you will agree with me that everything about Mountainview High School is exciting.

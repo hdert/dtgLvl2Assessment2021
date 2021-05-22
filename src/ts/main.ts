@@ -1,2 +1,1 @@
-"strict = true";
 import "bootstrap";
