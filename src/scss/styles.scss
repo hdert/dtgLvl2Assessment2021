@@ -1,18 +1,18 @@
 @use "_modules/variables" as *;
 @use "_modules/mixins" as *;
 
+/* User CSS */
+
+/* Carousel CSS */
+
+/* Make carousel images responsive to device size, scaling within their containers whilst being the height of the screen minus the navbar */
 .carousel-item img {
   object-fit: cover;
   height: calc(100vh - 56px);
   margin: auto;
 }
 
-.card picture img {
-  object-fit: cover;
-  object-position: center;
-  margin: auto;
-  height: 20vh;
-}
+/* Set what point to zoom the image into on especially wide or tall devices */
 
 @include gen-carousel-image-center(
   49.9% 39%,
@@ -22,13 +22,20 @@
   64.9% 51.8%
 );
 
+/* Remove navbar padding for a cleaner look */
+
 .navbar-brand {
   padding: 0;
 }
 
+/* Give the carousel caption a slight blur for less distraction when using a blink engine browser */
+
 .carousel-caption {
   backdrop-filter: blur(4px);
 }
+
+/* Make the carousel caption background shaded for a minimum 4.5:1 contrast between the text and background image. */
+/* Note: the values are programmatically generated so they may overlap, this is for extensibility in the ability to swap out images */
 
 @include gen-carousel-text-opacities(0.533 0.533 0.533 0.533 0.533);
 
@@ -40,3 +47,30 @@
     height: calc(100vh - 96px);
   }
 }
+
+/* Sports page images CSS */
+
+/* Make sports page images responsive to device size, scaling within their containers. */
+
+.card picture img {
+  object-fit: cover;
+  height: 20vh;
+  margin: auto;
+}
+
+/* Set what point to zoom the image into especially on wide or tall devices */
+/* Note: the following values are programmatically generated so they may overlap, this is for extensibility in the ability to swap out images */
+
+@include gen-sports-page-image-center(
+  35% 63%,
+  center 40%,
+  55% 47%,
+  center 10%,
+  85% 35%,
+  40% 35%,
+  10% 60%,
+  center 60%,
+  70% 78%,
+  60% 47%,
+  35% 30%
+);
