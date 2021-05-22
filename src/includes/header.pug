@@ -3,7 +3,12 @@ include links.pug
 mixin header(activePage)
   nav.navbar.navbar-expand-lg.navbar-dark.bg-secondary.sticky-top.container-fluid
     a.navbar-brand(href="index.pug")
-      img(src="../img/MVHS crest.png", alt="MVHS Crest", height="40")
+      img(
+        src="../img/optimized/MVHS crest.png",
+        alt="MVHS Crest",
+        height="40",
+        width="38.8333"
+      )
     #navbarContent.collapse.navbar-collapse.order-1
       .navbar-nav
         +nav-link("index", activePage, "Home")
@@ -17,7 +22,7 @@ mixin header(activePage)
       type="button",
       data-bs-toggle="collapse",
       data-bs-target="#navbarContent",
-      aria-controls="#navbarContent",
+      aria-controls="navbarContent",
       aria-label="Toggle Drop-Down Navigation"
     )
       span.navbar-toggler-icon
