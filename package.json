@@ -9,7 +9,7 @@
     "css": "run-s css-prefix css-lint",
     "start": "parcel serve --dist-dir 'dev/' './src/pug/*.pug'",
     "preparcel-build": "preparcel-build",
-    "parcel-build": "parcel build --dist-dir 'dist/' './src/pug/*.pug'",
+    "parcel-build": "parcel build --no-optimize --no-content-hash --dist-dir 'dist/' './src/pug/*.pug'",
     "build": "run-s parcel-build css"
   },
   "dependencies": {
