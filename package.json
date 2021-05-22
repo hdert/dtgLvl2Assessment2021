@@ -5,8 +5,8 @@
   "scripts": {
     "css-lint": "stylelint src/scss/",
     "css-prefix": "postcss --replace dist/*.css --use autoprefixer --map",
-    "css-purge": "purgecss --keyframes --css dist/*.css --content dist/*.html --output dist/",
-    "css": "run-s css-prefix css-lint",
+    "css-purge": "purgecss --keyframes --css dist/*.css --content dist/*.html --content dist/*.js --output dist/",
+    "css": "run-s css-prefix css-purge css-lint",
     "start": "parcel serve --dist-dir 'dev/' './src/pug/*.pug'",
     "preparcel-build": "preparcel-build",
     "parcel-build": "parcel build --no-optimize --no-content-hash --dist-dir 'dist/' './src/pug/*.pug'",
