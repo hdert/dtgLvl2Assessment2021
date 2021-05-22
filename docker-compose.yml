@@ -5,12 +5,5 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./dev/:/usr/share/caddy
-      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
-  web2:
-    image: caddy
-    ports:
-      - 8080:80
-    volumes:
       - ./dist/:/usr/share/caddy
       - ./caddy/Caddyfile:/etc/caddy/Caddyfile
