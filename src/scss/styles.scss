@@ -74,3 +74,10 @@
   60% 47%,
   35% 30%
 );
+
+/* Make the navbar button right aligned */
+
+nav .show ~ .navbar-toggler,
+nav .collapsing ~ .navbar-toggler {
+  margin-left: auto;
+}
