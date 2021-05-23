@@ -24,9 +24,16 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-font-sans-serif: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-font-sans-serif: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
 }
 *,
 *::before,
@@ -49,29 +56,39 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
- h5, .h5, h2, .h2, h1, .h1 {
+h5,
+.h5,
+h2,
+.h2,
+h1,
+.h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
-h1, .h1 {
+h1,
+.h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
-  h1, .h1 {
+  h1,
+  .h1 {
     font-size: 2.5rem;
   }
 }
-h2, .h2 {
+h2,
+.h2 {
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
-  h2, .h2 {
+  h2,
+  .h2 {
     font-size: 2rem;
   }
 }
-h5, .h5 {
+h5,
+.h5 {
   font-size: 1.25rem;
 }
 p {
@@ -91,7 +108,8 @@ ul {
 ul ul {
   margin-bottom: 0;
 }
-small, .small {
+small,
+.small {
   font-size: 0.875em;
 }
 a {
@@ -101,7 +119,8 @@ a {
 a:hover {
   color: #c2c2c2;
 }
-a:not([href]):not([class]), a:not([href]):not([class]):hover {
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
 }
@@ -167,15 +186,15 @@ select:disabled {
   opacity: 1;
 }
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 button:not(:disabled),
-[type=button]:not(:disabled),
-[type=reset]:not(:disabled),
-[type=submit]:not(:disabled) {
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
   cursor: pointer;
 }
 textarea {
@@ -209,66 +228,63 @@ summary {
   margin-left: auto;
 }
 @media (min-width: 576px) {
-   .container {
+  .container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-   .container {
+  .container {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-   .container {
+  .container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-   .container {
+  .container {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-   .container {
+  .container {
     max-width: 1320px;
   }
 }
 .col {
   -ms-flex: 1 0 0%;
-      flex: 1 0 0%;
+  flex: 1 0 0%;
 }
 .col-12 {
   -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 100%;
 }
 @media (min-width: 576px) {
-
   .col-sm-6 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+    flex: 0 0 auto;
     width: 50%;
   }
 }
 @media (min-width: 768px) {
-
   .col-md-4 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+    flex: 0 0 auto;
     width: 33.3333333333%;
   }
 
   .col-md-6 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+    flex: 0 0 auto;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-
   .col-lg-3 {
     -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+    flex: 0 0 auto;
     width: 25%;
   }
 }
@@ -322,7 +338,7 @@ summary {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -332,14 +348,16 @@ summary {
   padding: 0.5rem 1rem;
   color: #f2f2f2;
   text-decoration: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
   }
 }
-.nav-link:hover, .nav-link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: #c2c2c2;
 }
 .navbar {
@@ -347,11 +365,11 @@ summary {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   -ms-flex-pack: justify;
-      justify-content: space-between;
+  justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-image: var(--bs-gradient);
@@ -361,11 +379,11 @@ summary {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: inherit;
-      flex-wrap: inherit;
+  flex-wrap: inherit;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   -ms-flex-pack: justify;
-      justify-content: space-between;
+  justify-content: space-between;
 }
 .navbar-brand {
   padding-top: 0.3125rem;
@@ -379,7 +397,7 @@ summary {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -394,11 +412,11 @@ summary {
 }
 .navbar-collapse {
   -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   -ms-flex-positive: 1;
-      flex-grow: 1;
+  flex-grow: 1;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
 }
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
@@ -434,13 +452,13 @@ summary {
 @media (min-width: 992px) {
   .navbar-expand-lg {
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -ms-flex-pack: start;
-        justify-content: flex-start;
+    justify-content: flex-start;
   }
   .navbar-expand-lg .navbar-nav {
     -ms-flex-direction: row;
-        flex-direction: row;
+    flex-direction: row;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0.5rem;
@@ -450,7 +468,7 @@ summary {
     display: -ms-flexbox !important;
     display: flex !important;
     -ms-flex-preferred-size: auto;
-        flex-basis: auto;
+    flex-basis: auto;
   }
   .navbar-expand-lg .navbar-toggler {
     display: none;
@@ -459,13 +477,15 @@ summary {
 .navbar-dark .navbar-brand {
   color: #fff;
 }
-.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus {
   color: #fff;
 }
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.75);
 }
-.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
   color: #fff;
 }
 .navbar-dark .navbar-nav .show > .nav-link,
@@ -492,7 +512,7 @@ summary {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
@@ -516,7 +536,7 @@ summary {
 }
 .carousel.pointer-event {
   -ms-touch-action: pan-y;
-      touch-action: pan-y;
+  touch-action: pan-y;
 }
 .carousel-inner {
   position: relative;
@@ -535,7 +555,7 @@ summary {
   width: 100%;
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: -webkit-transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
@@ -554,12 +574,12 @@ summary {
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
   -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
 }
 .carousel-item-prev:not(.carousel-item-end),
 .active.carousel-item-start {
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 /* rtl:end:ignore */
 .carousel-control-prev,
@@ -571,9 +591,9 @@ summary {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   width: 15%;
   padding: 0;
   color: #fff;
@@ -585,11 +605,12 @@ summary {
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-control-prev,
-.carousel-control-next {
+  .carousel-control-next {
     transition: none;
   }
 }
-.carousel-control-prev:hover, .carousel-control-prev:focus,
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
 .carousel-control-next:hover,
 .carousel-control-next:focus {
   color: #fff;
@@ -599,11 +620,19 @@ summary {
 }
 .carousel-control-prev {
   left: 0;
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.001));
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.001)
+  );
 }
 .carousel-control-next {
   right: 0;
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.001));
+  background-image: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.001)
+  );
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -637,7 +666,7 @@ summary {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   padding: 0;
   margin-right: 15%;
   margin-bottom: 1rem;
@@ -647,7 +676,7 @@ summary {
 .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
   -ms-flex: 0 1 auto;
-      flex: 0 1 auto;
+  flex: 0 1 auto;
   width: 30px;
   height: 3px;
   padding: 0;
@@ -727,27 +756,27 @@ summary {
 }
 .flex-column {
   -ms-flex-direction: column !important;
-      flex-direction: column !important;
+  flex-direction: column !important;
 }
 .flex-wrap {
   -ms-flex-wrap: wrap !important;
-      flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
 }
 .align-items-start {
   -ms-flex-align: start !important;
-      align-items: flex-start !important;
+  align-items: flex-start !important;
 }
 .order-2 {
   -ms-flex-order: 2 !important;
-      order: 2 !important;
+  order: 2 !important;
 }
 .order-4 {
   -ms-flex-order: 4 !important;
-      order: 4 !important;
+  order: 4 !important;
 }
 .order-5 {
   -ms-flex-order: 5 !important;
-      order: 5 !important;
+  order: 5 !important;
 }
 .my-3 {
   margin-top: 1rem !important;
@@ -809,22 +838,20 @@ summary {
   visibility: visible !important;
 }
 @media (min-width: 576px) {
-
   .order-sm-0 {
     -ms-flex-order: 0 !important;
-        order: 0 !important;
+    order: 0 !important;
   }
 }
 @media (min-width: 992px) {
-
   .order-lg-1 {
     -ms-flex-order: 1 !important;
-        order: 1 !important;
+    order: 1 !important;
   }
 
   .order-lg-4 {
     -ms-flex-order: 4 !important;
-        order: 4 !important;
+    order: 4 !important;
   }
 }
 /* User CSS */
@@ -832,30 +859,30 @@ summary {
 /* Make carousel images responsive to device size, scaling within their containers whilst being the height of the screen minus the navbar */
 .carousel-item img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: calc(100vh - 56px);
   margin: auto;
 }
 /* Set what point to zoom the image into on especially wide or tall devices */
 #carousel-item-1 > img {
   -o-object-position: 49.9% 39%;
-     object-position: 49.9% 39%;
+  object-position: 49.9% 39%;
 }
 #carousel-item-2 > img {
   -o-object-position: 51% 39.4%;
-     object-position: 51% 39.4%;
+  object-position: 51% 39.4%;
 }
 #carousel-item-3 > img {
   -o-object-position: 48.7% 40%;
-     object-position: 48.7% 40%;
+  object-position: 48.7% 40%;
 }
 #carousel-item-4 > img {
   -o-object-position: 67.1% 30.4%;
-     object-position: 67.1% 30.4%;
+  object-position: 67.1% 30.4%;
 }
 #carousel-item-5 > img {
   -o-object-position: 64.9% 51.8%;
-     object-position: 64.9% 51.8%;
+  object-position: 64.9% 51.8%;
 }
 /* Remove navbar padding for a cleaner look */
 .navbar-brand {
@@ -864,7 +891,7 @@ summary {
 /* Give the carousel caption a slight blur for less distraction when using a blink engine browser */
 .carousel-caption {
   -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 /* Make the carousel caption background shaded for a minimum 4.5:1 contrast between the text and background image. */
 /* Note: the values are programmatically generated so they may overlap, this is for extensibility in the ability to swap out images */
@@ -896,7 +923,7 @@ summary {
 /* Make sports page images responsive to device size, scaling within their containers. */
 .card picture img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 20vh;
   margin: auto;
 }
@@ -904,47 +931,47 @@ summary {
 /* Note: the following values are programmatically generated so they may overlap, this is for extensibility in the ability to swap out images */
 #picture-1 > picture > img {
   -o-object-position: 35% 63%;
-     object-position: 35% 63%;
+  object-position: 35% 63%;
 }
 #picture-2 > picture > img {
   -o-object-position: center 40%;
-     object-position: center 40%;
+  object-position: center 40%;
 }
 #picture-3 > picture > img {
   -o-object-position: 55% 47%;
-     object-position: 55% 47%;
+  object-position: 55% 47%;
 }
 #picture-4 > picture > img {
   -o-object-position: center 10%;
-     object-position: center 10%;
+  object-position: center 10%;
 }
 #picture-5 > picture > img {
   -o-object-position: 85% 35%;
-     object-position: 85% 35%;
+  object-position: 85% 35%;
 }
 #picture-6 > picture > img {
   -o-object-position: 40% 35%;
-     object-position: 40% 35%;
+  object-position: 40% 35%;
 }
 #picture-7 > picture > img {
   -o-object-position: 10% 60%;
-     object-position: 10% 60%;
+  object-position: 10% 60%;
 }
 #picture-8 > picture > img {
   -o-object-position: center 60%;
-     object-position: center 60%;
+  object-position: center 60%;
 }
 #picture-9 > picture > img {
   -o-object-position: 70% 78%;
-     object-position: 70% 78%;
+  object-position: 70% 78%;
 }
 #picture-10 > picture > img {
   -o-object-position: 60% 47%;
-     object-position: 60% 47%;
+  object-position: 60% 47%;
 }
 #picture-11 > picture > img {
   -o-object-position: 35% 30%;
-     object-position: 35% 30%;
+  object-position: 35% 30%;
 }
 
 /*# sourceMappingURL=index.6242c32f.css.map */
