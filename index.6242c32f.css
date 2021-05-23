@@ -734,10 +734,6 @@ summary {
   -ms-flex-align: start !important;
       align-items: flex-start !important;
 }
-.order-1 {
-  -ms-flex-order: 1 !important;
-      order: 1 !important;
-}
 .order-2 {
   -ms-flex-order: 2 !important;
       order: 2 !important;
@@ -745,6 +741,10 @@ summary {
 .order-4 {
   -ms-flex-order: 4 !important;
       order: 4 !important;
+}
+.order-5 {
+  -ms-flex-order: 5 !important;
+      order: 5 !important;
 }
 .my-3 {
   margin-top: 1rem !important;
@@ -813,6 +813,11 @@ summary {
   }
 }
 @media (min-width: 992px) {
+
+  .order-lg-1 {
+    -ms-flex-order: 1 !important;
+        order: 1 !important;
+  }
 
   .order-lg-4 {
     -ms-flex-order: 4 !important;
@@ -937,11 +942,6 @@ summary {
 #picture-11 > picture > img {
   -o-object-position: 35% 30%;
      object-position: 35% 30%;
-}
-/* Make the navbar button right aligned */
-nav .show ~ .navbar-toggler,
-nav .collapsing ~ .navbar-toggler {
-  margin-left: auto;
 }
 
 /*# sourceMappingURL=index.6242c32f.css.map */
