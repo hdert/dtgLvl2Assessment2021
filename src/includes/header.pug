@@ -1,6 +1,9 @@
 include links.pug
 
 mixin header(activePage)
+  //
+    Declare navbar as dark colored, with a background color as our secondary color,
+    sticks to the top of the screen, and is a container
   nav.navbar.navbar-expand-lg.navbar-dark.bg-secondary.sticky-top.container-fluid
     a.navbar-brand(href="index.pug")
       img(
@@ -9,6 +12,10 @@ mixin header(activePage)
         height="40",
         width="39"
       )
+    // Wrap the navbar in a collapsible section
+    //
+      Make this the last element normally (see user feedback)
+      However, when large screen and bigger (i.e. navbar collapse goes away), make it before the motto and after the logo
     #navbarContent.collapse.navbar-collapse.order-5.order-lg-1
       .navbar-nav
         +nav-link("index", activePage, "Home")
@@ -18,6 +25,7 @@ mixin header(activePage)
         +fake-nav-link("Learning Areas")
         +fake-nav-link("News")
         +fake-nav-link("Contact Us")
+    // Make sure the motto can get 'behind' the toggle button
     button.navbar-toggler.order-2(
       type="button",
       data-bs-toggle="collapse",
@@ -27,4 +35,9 @@ mixin header(activePage)
       aria-expanded="false"
     )
       span.navbar-toggler-icon
+    // 
+      Make the motto go behind the button on small and medium screens
+      This is because on small screens the motto doesn't fit on the same line
+      as the rest of the navbar, and on large screens we want the motto infront
+      of the links
     span#motto.navbar-text.order-4.order-sm-0.order-lg-4.text-center Empowering students to thrive in our Whanau

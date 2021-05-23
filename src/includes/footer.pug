@@ -15,6 +15,9 @@ mixin footer(activePage)
           | Timaru 7940, South Canterbury,
           | New Zealand
       // Wrap the footer links in a <nav> tag so that screen readers recognize it properly
+      //
+        The reason the columns are applied like this are so that there are three columns on
+        medium device sizes and up (6-3-3) and one even column on small small devices
       nav.col-12.col-md-6.d-flex.flex-wrap
         // Apply .px-0 so that footer links override the styling from .nav-link and are in alignment (C.R.A.P) with the previous text
         .col-12.col-md-6.ps-3

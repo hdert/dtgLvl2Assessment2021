@@ -1,6 +1,7 @@
 mixin gen-pictures(...attrs)
   - var iteration = 1;
   each list_of_attrs in attrs
+    // be one column on xs, two on sm, three on md and four on lg and up
     .col-12.col-sm-6.col-md-4.col-lg-3.card(id=`picture-${iteration}`)
       picture
         +gen-sources(list_of_attrs[0])
@@ -21,7 +22,8 @@ html(lang="en")
   body.d-flex.flex-column.min-vh-100
     include ../includes/header.pug
     +header("sports")
-    .container.mt-3
+    // Spacing from nav
+    .container.my-3
       h1 Sport
       p At Mountainview we pride ourselves in giving our students as many sporting opportunities as possible.
         br
@@ -31,7 +33,9 @@ html(lang="en")
         br
         | The school participates in at least two exchanges with other schools which may also include chess, debating and theatre sports.
       h2 The range of sports includes:
+      // flex wrap for multiline lists, margin bottom for spacing from footer
       .d-flex.flex-wrap.align-items-start.mb-3
+        // Be one column in xs, two columns sm and four columns in md and up
         .col-12.col-sm-6.d-flex.flex-wrap
           ul.col-12.col-md-6.mb-0
             li Archery
@@ -60,6 +64,7 @@ html(lang="en")
             li Tennis
             li Touch
             li Volleyball
+      // flex-wrap for multiline images
       .d-flex.flex-wrap
         +gen-pictures([["232a5926.jpg"], "232a5926.jpg", "Side-on of student's legs sticking out of water after diving into swimming pool"], [["20170813_115205.jpg"], "20170813_115205.jpg", "Four students shooting clay birds with two supervisors"], [["adj-outdoor-education.jpg"], "adj-outdoor-education.jpg", "Seven students rowing in a rubber dingy with a coach"], [["img_0040.jpg"], "img_0040.jpg", "Five students standing with arms over each others shoulders, splattered with powerder paint"], [["img_3068.jpg"], "img_3068.jpg", "Student running barefooted on grass running track"], [["img_4061.jpg"], "img_4061.jpg", "Students walking whilst balancing tennis balls on spoons"], [["img_4353.jpg"], "img_4353.jpg", "Student ready to throw javelin"], [["img_4515.jpg"], "img_4515.jpg", "Students in line throwing gumboots"], [["img_4532.jpg"], "img_4532.jpg", "Student smiling, fallen over in long jump sand pit"], [["img_8213.jpg"], "img_8213.jpg", "MVHS netball team of ten, group photo with coach"], [["img_20210312_110620.jpg"], "img_20210312_110620.jpg", "Seven students and two teachers in group photo with obstacle course safety gear on"])
     include ../includes/footer.pug
