@@ -91,6 +91,9 @@ ul {
 ul ul {
   margin-bottom: 0;
 }
+small, .small {
+  font-size: 0.875em;
+}
 a {
   color: #f2f2f2;
   text-decoration: underline;
