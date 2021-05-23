@@ -938,5 +938,10 @@ summary {
   -o-object-position: 35% 30%;
      object-position: 35% 30%;
 }
+/* Make the navbar button right aligned */
+nav .show ~ .navbar-toggler,
+nav .collapsing ~ .navbar-toggler {
+  margin-left: auto;
+}
 
 /*# sourceMappingURL=index.6242c32f.css.map */
