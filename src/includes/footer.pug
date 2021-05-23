@@ -3,7 +3,9 @@ mixin footer(activePage)
   footer.bg-secondary.text-light.overflow-auto.mt-auto
     .container.my-3.nav.text-break
       .col-12.col-md-6.ps-3
+        // Apply an h5 class rather than an <h5> tag so that screen readers don't get confused but sighted users can see the pretty
         p.h5 Contact Us:
+        // Use anchor tags so that people can click them to contact us
         p 
           a(href="tel:036847039") Phone: 03 684 7039
           br
@@ -12,7 +14,9 @@ mixin footer(activePage)
           | 97 Pages Road, Private Bag 907,
           | Timaru 7940, South Canterbury,
           | New Zealand
+      // Wrap the footer links in a <nav> tag so that screen readers recognize it properly
       nav.col-12.col-md-6.d-flex.flex-wrap
+        // Apply .px-0 so that footer links override the styling from .nav-link and are in alignment (C.R.A.P) with the previous text
         .col-12.col-md-6.ps-3
           +footer-link("index", "Home")
           +footer-link("sports", "Sport")
